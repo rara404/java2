@@ -41,4 +41,20 @@ public class ShoppingCart {
         return "$" + this.total;
     }
 
+    public ArrayList<Items> getShoppingCart() {
+        return shoppingCart;
+    }
+
+    public double getShippingCost() {
+        return shippingCost;
+    }
+
+    public double getSalesTax() {
+        return salesTax;
+    }
+
+    public Invoice shipOrder(String name, String add, String city, String state, int zip ){
+        return new Invoice(name, add, city, state, zip, this);
+    }
+
 }
