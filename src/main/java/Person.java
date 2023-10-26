@@ -1,30 +1,29 @@
-public class Person {
+public class Person extends Animal {
     private String firstName;
     private String lastName;
-    private byte age;
     private int ssn;
     private static int count = 0;
 
     public Person() {
+        super();
         this.firstName = null;
         this.lastName = null;
-        this.age = -1;
         this.ssn = -1;
         count++;
     }
 
     public Person(String firstName, String lastName) {
+        super();
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = -1;
         this.ssn = -1;
         count++;
     }
 
     public Person(String firstName, String lastName, byte age, int ssn) {
+        super(age);
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
         this.ssn = ssn;
         count++;
     }
