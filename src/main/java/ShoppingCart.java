@@ -4,7 +4,6 @@ public class ShoppingCart {
     private ArrayList<Items> shoppingCart;
     private float total = 0;
     private double shippingCost = 0;
-
     private double salesTax;
 
 

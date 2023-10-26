@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 //        ex1();
@@ -6,7 +8,8 @@ public class Main {
 //         ex4();
 //         ex5a();
 //         ex5b();
-        ex5c();
+//         ex5c();
+        ex6();
     }
 
     private static void ex1() {
@@ -27,7 +30,7 @@ public class Main {
     }
 
     private static void ex2() {
-       ex1();
+        ex1();
     }
 
     private static void ex3() {
@@ -42,7 +45,7 @@ public class Main {
 
     private static void ex4() {
 
-        var calculator =  new Calculator();
+        var calculator = new Calculator();
         var result1 = calculator.add(1, 2);
         var result2 = calculator.subtract(4, 2);
         var result3 = calculator.divide(10, 5);
@@ -67,13 +70,22 @@ public class Main {
         ex5a();
     }
 
-    private static void ex5c(){
+    private static void ex5c() {
         var shoppingCart = new ShoppingCart();
         shoppingCart.addItem(new Items(2.00F, 4, "Socks"));
         shoppingCart.addItem(new Items(10.00F, 2, "Shirts"));
         shoppingCart.calculateTotal();
         var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
         System.out.println(invoice);
+    }
+
+    private static void ex6() {
+        var shapes = new ArrayList<Shape>();
+        shapes.add(new Square(3));
+        shapes.add(new Rectangle(10, 3));
+        for (Shape s : shapes) {
+            System.out.println(s.draw());
+        }
     }
 
 
