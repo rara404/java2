@@ -5,7 +5,8 @@ public class Main {
 //         ex3();
 //         ex4();
 //         ex5a();
-         ex5b();
+//         ex5b();
+        ex5c();
     }
 
     private static void ex1() {
@@ -64,6 +65,15 @@ public class Main {
 
     private static void ex5b() {
         ex5a();
+    }
+
+    private static void ex5c(){
+        var shoppingCart = new ShoppingCart();
+        shoppingCart.addItem(new Items(2.00F, 4, "Socks"));
+        shoppingCart.addItem(new Items(10.00F, 2, "Shirts"));
+        shoppingCart.calculateTotal();
+        var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
+        System.out.println(invoice);
     }
 
 
